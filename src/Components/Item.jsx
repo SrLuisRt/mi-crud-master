@@ -1,6 +1,6 @@
 import React from "react";
 
-function Item({ item, deleteItem, editItem }) {
+function Item({ item, deleteItem, editItem }) {  // funcion item recibe props
   return (
     <li>
       {item.value}
