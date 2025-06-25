@@ -1,16 +1,17 @@
 import React, { useState, useEffect } from 'react';
 
-function Form({addOrUpdateItem, itemToEdit}){ // Desestructuración de props
+function Form({addOrUpdateItem, itemToEdit}){//Permite tanto agregar como editar elementos en una lista o colección, dependiendo de si se recibe un itemToEdit.
+    
     const [inputValue, setInputValue] = useState('');
 
-    useEffect(() => {// Efecto para actualizar el valor del input cuando cambia itemToEdit
+    useEffect(() => { // Este efecto se ejecuta cuando itemToEdit cambia.  
         if (itemToEdit) {
             setInputValue(itemToEdit.value);
         } else {
             setInputValue('');
         }
     }, [itemToEdit]);
-    const handleSubmit = (e) => {// Manejo del evento de envío del formulario
+    const handleSubmit = (e) => {
     e.preventDefault();
     if (inputValue.trim()){
         addOrUpdateItem(inputValue);
