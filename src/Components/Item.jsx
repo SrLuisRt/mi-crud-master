@@ -1,11 +1,12 @@
 import React from "react";
 
-function Item({ item, deleteItem, editItem }) { // Componente que representa un elemento de una lista, con botones para editar y eliminar el elemento.
+// Componente funcional que representa un ítem con opciones de editar y eliminar
+function Item({ item, deleteItem, editItem }) {
     return (
         <li>
-        {item.value}
-        <button onClick={() => editItem(item)}>Editar</button>
-        <button onClick={() => deleteItem(item.id)}>Eliminar</button>
+            {item.value}
+            <button onClick={() => editItem(item)}>Editar</button>
+            <button onClick={() => deleteItem(item.id)}>Eliminar</button>
         </li>
     );
 }

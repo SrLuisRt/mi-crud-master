@@ -1,7 +1,8 @@
 import React from "react";
 import Item from "./Item";
 
-function List({ items, deleteItem, editItem }) {// Componente que representa una lista de elementos, donde cada elemento es un componente Item.
+// Componente funcional que muestra una lista de ítems usando el componente Item
+function List({ items, deleteItem, editItem }) {
   return (
     <ul>
       {items.map((item) => (
